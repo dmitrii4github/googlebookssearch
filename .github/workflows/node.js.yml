@@ -42,8 +42,8 @@ jobs:
           JF_URL: https://auroratrial.jfrog.io/
 
           # Basic authentication credentials
-          JF_USER: dmitrii_zakharov@hotmail.com
-          JF_PASSWORD: Vperyod50
+          JF_USER: ovechq@gmail.com
+          JF_PASSWORD: Aurora11!!
 
           # JFrog platform access token (if JF_USER and JF_PASSWORD are not provided)
           # JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
