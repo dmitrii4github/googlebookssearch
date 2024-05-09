@@ -30,8 +30,28 @@ jobs:
     - run: npm run build --if-present
     
     - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v4.3.3
+      
+      #uses: actions/upload-artifact@v4.3.3
+      #with:
+        #name: "myartifact"
+        #path: "*.*"
+
+      uses: jfrog/setup-jfrog-cli@v4
+      env:
+          # JFrog platform url (for example: https://acme.jfrog.io)
+          JF_URL: https://auroratrial.jfrog.io/
+
+          # Basic authentication credentials
+          JF_USER: dmitrii_zakharov@hotmail.com
+          JF_PASSWORD: Vperyod50
+
+          # JFrog platform access token (if JF_USER and JF_PASSWORD are not provided)
+          # JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
+
+          # Same can be achieved with a Config Token using JF_ENV_1 environment variable
+          # JF_ENV_1: ${{ secrets.JF_SECRET_ENV_1 }}
+        
       with:
-        name: "myartifact"
-        path: "*.*"
+        download-repository: jfrog-cli-remote
+
     
