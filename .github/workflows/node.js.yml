@@ -54,11 +54,11 @@ jobs:
       with:
         download-repository: jfrog-cli-remote
 
-        run: jfrog --version
+        #run: jfrog --version
 
-#      - run: jfrog rt dl artifacts
-#             jfrog rt u aether artifacts
-#             jfrog rt bp
+        run: jf rt dl artifacts
+             jf rt u aether artifacts
+             jf rt bp
 
 
     
