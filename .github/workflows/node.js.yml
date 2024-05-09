@@ -29,9 +29,9 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: |
-        jf rt dl artifacts/
-        jf rt u aether artifacts/
-        jf rt bp
+        jfrog rt dl artifacts/
+        jfrog rt u aether artifacts/
+        jfrog rt bp
     
     - name: Upload a Build Artifact
       
