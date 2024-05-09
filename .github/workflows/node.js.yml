@@ -56,9 +56,18 @@ jobs:
 
         #run: jfrog --version
 
-        run: jf rt dl artifacts
-             jf rt u aether artifacts
-             jf rt bp
+        #run: jf rt dl artifacts
+        #     jf rt u aether artifacts
+        #     jf rt bp
+
+        run: echo "test file " > test.txt
+            export BUILD_NAME="my-build"
+            export BUILD_MODULE="my-module"
+            export BUILD_NUMBER="1"
+            export PATH_TO_DIRECTORY="name/version/dates"
+      
+            jf rt upload "test.txt" example-repo-local/$PATH_TO_DIRECTORY --build-name $BUILD_NAME --build-number $BUILD_NUMBER --module $BUILD_MODULE
+
 
 
     
