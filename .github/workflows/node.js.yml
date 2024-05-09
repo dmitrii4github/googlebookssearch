@@ -68,7 +68,7 @@ jobs:
       
             jf rt upload "test.txt" jfrog-cli-remote/$PATH_TO_DIRECTORY --build-name $BUILD_NAME --build-number $BUILD_NUMBER --module $BUILD_MODULE
             jf rt build-publish $BUILD_NAME $BUILD_NUMBER
-            jf rt bdi c --max-builds=1
+            #jf rt bdi c --max-builds=1
      
         #name: Build to Artifactory
 
