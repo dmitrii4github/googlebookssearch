@@ -46,7 +46,7 @@ jobs:
           JF_PASSWORD: Aurora11!!
 
           # JFrog platform access token (if JF_USER and JF_PASSWORD are not provided)
-          # JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
+          JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
 
           # Same can be achieved with a Config Token using JF_ENV_1 environment variable
           # JF_ENV_1: ${{ secrets.JF_SECRET_ENV_1 }}
@@ -60,7 +60,11 @@ jobs:
         #     jf rt u aether artifacts
         #     jf rt bp
 
-        run: echo "test file " > test.txt
+        run: 
+            export SERVER_ID="test"
+            jf c add $SERVER_ID --url=$JF_URL --access-token=$JF_ACCESS_TOKEN --interactive=false
+ 
+            echo "test file " > test.txt
             export BUILD_NAME="my-build"
             export BUILD_MODULE="my-module"
             export BUILD_NUMBER="1"
