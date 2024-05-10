@@ -43,11 +43,11 @@ jobs:
 
 
    # This action publishes the build information to Artifactory and deletes older builds
-   - name: Build to Artifactory
-     run: |
-       jf rt build-publish $BUILD_NAME $BUILD_NUMBER
+   #- name: Build to Artifactory
+   #  run: |
+   # jf rt build-publish $BUILD_NAME $BUILD_NUMBER
      
-       jf rt bdi c --max-builds=1000
+   #jf rt bdi c --max-builds=1000
 
 
     
