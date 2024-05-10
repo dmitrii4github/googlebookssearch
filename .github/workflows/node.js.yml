@@ -47,7 +47,7 @@ jobs:
      run: |
        jf rt build-publish $BUILD_NAME $BUILD_NUMBER
      
-       jf rt bdi c --max-builds=1
+       jf rt bdi c --max-builds=1000
 
 
     
