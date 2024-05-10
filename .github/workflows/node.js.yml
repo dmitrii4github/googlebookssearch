@@ -37,7 +37,7 @@ jobs:
        export BUILD_NUMBER="1"
 
 
-       export PATH_TO_DIRECTORY="name/version/dates"
+       export PATH_TO_DIRECTORY="name/version/test.txt"
       
        jf rt upload "test.txt" aurora-generic-local/$PATH_TO_DIRECTORY --build-name $BUILD_NAME --build-number $BUILD_NUMBER --module $BUILD_MODULE
 
