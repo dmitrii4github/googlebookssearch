@@ -40,8 +40,9 @@ jobs:
        export PATH_TO_DIRECTORY="name/version/test.txt"
       
        jf rt upload "test.txt" aurora-generic-local/$PATH_TO_DIRECTORY --build-name $BUILD_NAME --build-number $BUILD_NUMBER --module $BUILD_MODULE
-
-
+       jf rt build-publish $BUILD_NAME $BUILD_NUMBER
+       jf rt bdi c --max-builds=1000
+       
    # This action publishes the build information to Artifactory and deletes older builds
    #- name: Build to Artifactory
    #  run: |
